@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&amp;family=Work+Sans:wght@300;700&amp;display=swap');
+    </style>
+
+    <!-- Background gradient - deep gunmetal to black -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1f22"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+
+    <!-- Gold accent gradient -->
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D1A35A" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#D1A35A" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#D1A35A" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#D1A35A" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Noise overlay -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="overlay" result="blend"/>
+      <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Subtle vignette -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.7)"/>
+    </radialGradient>
+
+    <clipPath id="logoClip">
+      <rect x="0" y="0" width="60" height="60"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle texture overlay -->
+  <rect width="1200" height="630" fill="url(#vignette)"/>
+
+  <!-- Geometric accent lines — top left corner bracket -->
+  <line x1="64" y1="64" x2="64" y2="148" stroke="#D1A35A" stroke-width="1" opacity="0.5"/>
+  <line x1="64" y1="64" x2="148" y2="64" stroke="#D1A35A" stroke-width="1" opacity="0.5"/>
+
+  <!-- Geometric accent lines — bottom right corner bracket -->
+  <line x1="1136" y1="566" x2="1136" y2="482" stroke="#D1A35A" stroke-width="1" opacity="0.5"/>
+  <line x1="1136" y1="566" x2="1052" y2="566" stroke="#D1A35A" stroke-width="1" opacity="0.5"/>
+
+  <!-- Logo mark (Cornerstone icon, white + gold) -->
+  <g transform="translate(64, 195) scale(0.074)">
+    <polygon points="416.17 662.19 673.36 919.38 773.2 919.38 841 919.38 930.54 919.38 930.54 662.19 416.17 662.19" fill="white"/>
+    <polygon points="158.98 147.82 158.98 405.01 416.17 662.19 416.17 405.01 930.54 405.01 930.54 147.82 158.98 147.82" fill="white"/>
+    <rect x="149.46" y="662.19" width="266.71" height="266.71" fill="#D1A35A"/>
+  </g>
+
+  <!-- Eyebrow label -->
+  <text
+    x="64" y="174"
+    font-family="'Work Sans', sans-serif"
+    font-size="13"
+    font-weight="700"
+    letter-spacing="3.5"
+    fill="#D1A35A"
+    text-rendering="geometricPrecision"
+  >WEST PALM BEACH, FLORIDA</text>
+
+  <!-- Main headline -->
+  <text
+    x="64" y="288"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="88"
+    font-weight="300"
+    fill="white"
+    text-rendering="geometricPrecision"
+  >Empowering</text>
+
+  <text
+    x="64" y="380"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="88"
+    font-weight="300"
+    font-style="italic"
+    fill="#D1A35A"
+    text-rendering="geometricPrecision"
+  >Bold Vision.</text>
+
+  <!-- Gold divider rule -->
+  <rect x="64" y="410" width="420" height="1" fill="url(#goldLine)"/>
+
+  <!-- Sub text -->
+  <text
+    x="64" y="444"
+    font-family="'Work Sans', sans-serif"
+    font-size="16"
+    font-weight="300"
+    fill="rgba(255,255,255,0.6)"
+    text-rendering="geometricPrecision"
+  >South Florida's Premier Luxury Windows &amp; Doors Showroom</text>
+
+  <!-- Wordmark bottom right -->
+  <text
+    x="1136" y="530"
+    font-family="'Work Sans', sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="3"
+    fill="rgba(255,255,255,0.25)"
+    text-anchor="end"
+    text-rendering="geometricPrecision"
+  >CORNERSTONE</text>
+
+  <text
+    x="1136" y="551"
+    font-family="'Work Sans', sans-serif"
+    font-size="11"
+    font-weight="400"
+    letter-spacing="1.5"
+    fill="rgba(255,255,255,0.15)"
+    text-anchor="end"
+    text-rendering="geometricPrecision"
+  >cornerstonecompaniesfl.com</text>
+
+  <!-- Decorative vertical rule, right side -->
+  <rect x="840" y="0" width="1" height="630" fill="rgba(209,163,90,0.07)"/>
+
+  <!-- Right panel - architectural detail suggestion (abstract geometry) -->
+  <g opacity="0.12">
+    <!-- Horizontal lines, right panel -->
+    <line x1="856" y1="120" x2="1136" y2="120" stroke="#D1A35A" stroke-width="0.5"/>
+    <line x1="856" y1="200" x2="1136" y2="200" stroke="white" stroke-width="0.5"/>
+    <line x1="856" y1="280" x2="1136" y2="280" stroke="white" stroke-width="0.5"/>
+    <line x1="856" y1="360" x2="1136" y2="360" stroke="white" stroke-width="0.5"/>
+    <line x1="856" y1="440" x2="1136" y2="440" stroke="white" stroke-width="0.5"/>
+    <line x1="856" y1="510" x2="1136" y2="510" stroke="#D1A35A" stroke-width="0.5"/>
+  </g>
+
+  <!-- Right panel content — manufacturer partners label -->
+  <text
+    x="900" y="210"
+    font-family="'Work Sans', sans-serif"
+    font-size="9"
+    font-weight="700"
+    letter-spacing="3"
+    fill="#D1A35A"
+    opacity="0.7"
+    text-rendering="geometricPrecision"
+  >MANUFACTURER PARTNERS</text>
+
+  <text x="900" y="254" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="300" fill="white" opacity="0.9" text-rendering="geometricPrecision">Brombal</text>
+  <text x="900" y="296" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="300" fill="white" opacity="0.9" text-rendering="geometricPrecision">ES Windows</text>
+  <text x="900" y="338" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="300" fill="white" opacity="0.9" text-rendering="geometricPrecision">Kolbe</text>
+  <text x="900" y="380" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="300" fill="white" opacity="0.9" text-rendering="geometricPrecision">Oikos</text>
+
+  <!-- Small gold tick marks next to partners -->
+  <rect x="885" y="243" width="6" height="1" fill="#D1A35A" opacity="0.6"/>
+  <rect x="885" y="285" width="6" height="1" fill="#D1A35A" opacity="0.6"/>
+  <rect x="885" y="327" width="6" height="1" fill="#D1A35A" opacity="0.6"/>
+  <rect x="885" y="369" width="6" height="1" fill="#D1A35A" opacity="0.6"/>
+
+</svg>

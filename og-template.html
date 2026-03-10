@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #0d1012;
+    font-family: 'Work Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 20% 60%, #1c2226 0%, #0d1012 60%, #000 100%);
+  }
+
+  /* Subtle grid texture */
+  .grid-lines {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Right panel divider */
+  .divider-v {
+    position: absolute;
+    right: 340px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(209,163,90,0.2) 20%, rgba(209,163,90,0.2) 80%, transparent);
+  }
+
+  /* Corner brackets */
+  .corner-tl {
+    position: absolute;
+    top: 48px;
+    left: 56px;
+    width: 32px;
+    height: 32px;
+    border-top: 1px solid rgba(209,163,90,0.55);
+    border-left: 1px solid rgba(209,163,90,0.55);
+  }
+  .corner-br {
+    position: absolute;
+    bottom: 48px;
+    right: 56px;
+    width: 32px;
+    height: 32px;
+    border-bottom: 1px solid rgba(209,163,90,0.55);
+    border-right: 1px solid rgba(209,163,90,0.55);
+  }
+
+  /* Logo mark */
+  .logo-wrap {
+    position: absolute;
+    top: 56px;
+    left: 56px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+  .logo-wordmark {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.9;
+  }
+
+  /* Main content */
+  .main {
+    position: absolute;
+    left: 56px;
+    bottom: 96px;
+    max-width: 700px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #D1A35A;
+    margin-bottom: 22px;
+    opacity: 0.9;
+  }
+
+  .headline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+    font-size: 90px;
+    line-height: 0.96;
+    letter-spacing: -0.015em;
+    color: white;
+  }
+  .headline em {
+    font-style: italic;
+    color: #D1A35A;
+    display: block;
+  }
+
+  .rule {
+    margin-top: 28px;
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(to right, #D1A35A, rgba(209,163,90,0.1));
+  }
+
+  .sub {
+    margin-top: 18px;
+    font-size: 13.5px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+  }
+
+  /* Right panel */
+  .right-panel {
+    position: absolute;
+    right: 56px;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    padding: 0 0 0 32px;
+  }
+
+  .partners-label {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #D1A35A;
+    opacity: 0.8;
+    margin-bottom: 24px;
+  }
+
+  .partner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .partner-dot {
+    width: 4px;
+    height: 4px;
+    background: #D1A35A;
+    border-radius: 50%;
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+  .partner-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    opacity: 0.88;
+    letter-spacing: 0.02em;
+  }
+
+  /* URL bottom right */
+  .url {
+    position: absolute;
+    bottom: 52px;
+    right: 56px;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.2);
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="grid-lines"></div>
+  <div class="divider-v"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <!-- Logo -->
+  <div class="logo-wrap">
+    <svg class="logo-icon" viewBox="0 0 1080 1080" fill="none">
+      <polygon points="416.17 662.19 673.36 919.38 773.2 919.38 841 919.38 930.54 919.38 930.54 662.19 416.17 662.19" fill="white"/>
+      <polygon points="158.98 147.82 158.98 405.01 416.17 662.19 416.17 405.01 930.54 405.01 930.54 147.82 158.98 147.82" fill="white"/>
+      <rect x="149.46" y="662.19" width="266.71" height="266.71" fill="#D1A35A"/>
+    </svg>
+    <span class="logo-wordmark">Cornerstone</span>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <div class="eyebrow">New Showroom &nbsp;·&nbsp; West Palm Beach, Florida</div>
+    <div class="headline">
+      Empowering
+      <em>Bold Vision.</em>
+    </div>
+    <div class="rule"></div>
+    <div class="sub">South Florida's Premier Luxury Windows &amp; Doors</div>
+  </div>
+
+  <!-- Right panel -->
+  <div class="right-panel">
+    <div class="partners-label">Manufacturer Partners</div>
+    <div class="partner"><div class="partner-dot"></div><span class="partner-name">Brombal</span></div>
+    <div class="partner"><div class="partner-dot"></div><span class="partner-name">ES Windows</span></div>
+    <div class="partner"><div class="partner-dot"></div><span class="partner-name">Kolbe</span></div>
+    <div class="partner"><div class="partner-dot"></div><span class="partner-name">Oikos</span></div>
+  </div>
+
+  <div class="url">cornerstonecompaniesfl.com</div>
+</body>
+</html>
